@@ -1,0 +1,2 @@
+String myWord = 'Hello World';
+System.debug(myWord);
