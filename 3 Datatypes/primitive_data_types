@@ -1,0 +1,13 @@
+# Premitive Data Types
+
+Boolean: True or false. It stores flag vlaues either true or false.
+String: 'Hello World'. It stores the string values.
+Integer: 12345. It is 32 bit iteger and stores integer/number values and upto 2^32.
+Long: 12345. It is 64 bit iteger and stores integer/number values and upto 2^64.
+Decimal: 10.2. It is 32 bit iteger and stores integer/number values and upto 2^32.
+Double: 10.2. It is 64 bit iteger and stores integer/number values and upto 2^64.
+Date: 
+Time:
+Datetime:
+Blob:
+ID:
