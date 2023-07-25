@@ -1,0 +1,15 @@
+List<String> Apex = new List<String>{'Demystifying Apex Collections', 'Datatypes and variables in Apex'};
+    
+    System.debug(Apex);
+
+List<String> Lightening = new List<String>{'Events in Aura framework', 'Developing reusable components'};
+    
+    System.debug(Lightening);
+
+Map<String, List<String>> myMap = new Map<String, List<String>>();
+
+myMap.put('apex', Apex);
+myMap.put('lightening', Lightening);
+
+
+System.debug(myMap);
