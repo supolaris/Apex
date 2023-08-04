@@ -1,0 +1,17 @@
+System.debug('The Fibonacci');
+
+Integer currentNum;
+Integer PreviousNum = 1;
+Integer PrePreviousNum = 0;
+System.debug(PrePreviousNum);
+System.debug(PreviousNum);
+
+Integer myNum = 0;
+
+While (myNum <18) {
+    currentNum = PreviousNum + PrePreviousNum;
+    System.debug(currentNum);
+    PrePreviousNum = PreviousNum;
+    PreviousNum = currentNum;
+    myNum++;
+}
