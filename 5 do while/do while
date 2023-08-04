@@ -1,0 +1,14 @@
+Integer myNum = 0;
+
+do {
+    if (Math.mod(myNum, 3) == 0){
+        System.debug('Fiz');
+    }
+    else if (Math.mod(myNum, 5) == 0){
+        System.debug('Buzz');
+    }
+    else {
+        System.debug(myNum);
+    }
+    myNum++;
+}while(myNum <= 100);
