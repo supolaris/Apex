@@ -1,0 +1,11 @@
+List<String> days = new List<String>{'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'};
+    
+Integer length = days.size();
+
+for (Integer i = 0; i<length; i++){
+    if(days.get(i) == ' Saturday' || days.get(i) == ' Sunday' ){
+        System.debug('do not work beacause it is' + days.get(i));
+        continue;
+    }
+    System.debug('We work on ' + days.get(i));
+}
