@@ -1,0 +1,9 @@
+Integer myNum = 16;
+Integer myVal = 20;
+
+for (Integer i = 1; i<=myVal; i++){
+    System.debug('the iteration is' + i);
+    if(i==myNum){
+        break;
+    }
+}
