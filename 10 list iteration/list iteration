@@ -1,0 +1,8 @@
+List<String> myDays = new List<String>{'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friiday'};
+    
+    for (String day : myDays){
+        if (day == 'Tuesday'){
+            continue;
+        }
+        System.debug(day);
+    }
