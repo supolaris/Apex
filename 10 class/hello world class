@@ -1,0 +1,7 @@
+public class Helloworld {
+    String myText = 'Hello world';
+    
+    public void printText(){
+        System.debug(myText);
+    }
+}
