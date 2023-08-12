@@ -1,0 +1,15 @@
+static_class myClass = new Static_class();
+
+System.debug('Old value CL1 ' + myClass.p1);
+static_class.updatedVal();
+
+myClass.updateVal();
+
+System.debug('Updated value CL1 ' + myClass.p1);
+static_class.updatedVal();
+
+static_class myClass2 = new Static_class();
+myClass2.updateVal();
+
+System.debug('Updated value CL2 ' + myClass.p1);
+static_class.updatedVal();
