@@ -1,0 +1,14 @@
+parametrised_class myClass = new parametrised_class();
+
+myClass.MyText();
+
+myclass.InputText(001);
+myclass.InputText(002);
+
+
+System.debug(myclass.getDay(0));
+System.debug(myclass.getDay(1));
+System.debug(myclass.getDay(2));
+
+
+System.debug(myclass.getDay('sun'));
