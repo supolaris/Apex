@@ -1,0 +1,15 @@
+public class static_class {
+    
+    public Integer p1 = 0;
+    public Static Integer p2 = 0;
+    
+    Public void updateVal(){
+        p1++;
+        p2++;
+    }
+    
+    Public Static void updatedVal(){
+        System.debug('updated value is ' + p2);
+    }
+
+}
