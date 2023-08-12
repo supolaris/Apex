@@ -1,0 +1,67 @@
+public class parametrised_class {
+    
+    
+    
+    public void MyText(){
+        System.debug('Hello world');
+    }
+    
+    public void InputText(Integer myval){
+        System.debug(myval);
+    }
+    
+    public String getDay(Integer getVal){
+        String myday = '';
+        
+        switch on getVal{
+            when 0 {
+                myday = 'Monday';
+            }
+            when 1 {
+                myday = 'Tuesday';
+            }
+            when 2 {
+                myday = 'Wednesday';
+            }
+            when 3 {
+                myday = 'Thursday';
+            }
+            when else {
+                myday = 'Invalid input';
+            }
+        }
+        return myday;
+    }
+    
+    public String getDay(String inputVal){
+        String myShortVal = '';
+        switch on inputVal{
+            when 'sun'{
+                myShortVal= 'Sunday';
+            }
+            when 'mon'{
+                myShortVal= 'Monday';
+            }
+            when 'tue'{
+                myShortVal= 'Tuesday';
+            }
+            when 'wed'{
+                myShortVal= 'Wednesday';
+            }
+            when 'thu'{
+                myShortVal= 'Thursday';
+            }
+            when 'fri'{
+                myShortVal= 'Friday';
+            }
+            when else {
+                myShortVal= 'Invalid input';
+            }
+        }
+        return myShortVal;
+    }
+    
+    
+    
+
+}
