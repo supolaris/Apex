@@ -1,0 +1,4 @@
+System.debug('BMI of Weight 25' + ' & height 6 is' + fitness.CalculateBMi(25, 6));
+System.debug('BMI of Weight 12' + ' & height 5.26 is' + fitness.CalculateBMi(12, 5.26));
+
+System.debug('Pace of distance 12' + ' & minutes 70 is' + fitness.CalculatePace(12, 5.26));
