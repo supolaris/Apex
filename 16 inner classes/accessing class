@@ -1,0 +1,10 @@
+innerCompany myCompany = new innerCompany();
+
+
+myCompany.createCompany('SolutionsPanda', 'Islamabad', 'https://solutionspanda.com', 'Digital');
+
+myCompany.getCompany();
+
+myCompany.createDeveloper('M. Suleman', 'Full Stack Dev', 'https://www.linkedin.com/in/muhammad-suleman-593a6b20a/', 'supolaris', 090078601L);
+
+myCompany.getDeveloper();
