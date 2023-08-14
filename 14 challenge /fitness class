@@ -1,0 +1,14 @@
+public class fitness{
+    
+    public static Decimal CalculateBMi(Decimal weight, Decimal height){
+        Decimal result = weight / (height*height);
+        return result;
+    }
+    
+    public static Decimal CalculatePace(Decimal distance, Decimal minutes){
+        Decimal hours = minutes/60;
+        Decimal pace = distance/hours;
+        return pace;
+    }
+
+}
