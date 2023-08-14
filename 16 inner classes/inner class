@@ -1,0 +1,53 @@
+public class innerCompany {
+    
+    //the company
+    List<company> myComapny = new List<company>();
+    public void createCompany(String comName, String comCity, String comWebsite, String comServices){
+        company newCompany = new company(comName, comCity, comWebsite, comServices);
+        myComapny.add(newCompany);
+    }
+    public void getCompany(){
+        for(company theCompany : myComapny){
+            System.debug('');System.debug('Company Name: ' + theCompany.comName + ' Company City: ' + theCompany.comCity + ' Company Website: ' + theCompany.comWebsite + ' Company UAN:' + theCompany.comServices);
+        }
+    }
+    public class company{
+        String comName;
+        String comCity;
+        String comWebsite;
+        String comServices;
+        company(String comName, String comCity, String comWebsite, String comServices){
+            this.comName = comName;
+            this.comCity = comCity;
+            this.comWebsite = comWebsite;
+            this.comServices = comServices;           
+        }
+    }
+
+    //the developer
+        List<developer> developers = new List<developer>();  
+    public void createDeveloper(String dName, String dDesignation, String dLinkedin, String dGitHub, Long dPhone){
+        developer newDeveloper = new developer(dName, dDesignation, dLinkedin, dGitHub, dPhone);
+        developers.add(newDeveloper); 
+    }
+    public void getDeveloper(){
+        for(developer theDeveloper : developers){
+        System.debug('Developer Name: ' + theDeveloper.dName + ' Developer Designation: ' + theDeveloper.dDesignation + ' Developer Linkedin: ' + theDeveloper.dLinkedin + 'Developer GitHub ' + theDeveloper.dGitHub+ ' Developer Phone: ' + theDeveloper.dPhone);
+        }
+    }
+    private class developer{
+        public String dName;
+        public String dDesignation;
+        public String dLinkedin;
+        public String dGitHub;
+        public Long dPhone;
+        developer(String dName, String dDesignation, String dLinkedin, String dGitHub, Long dPhone){
+        	this.dName = dName;
+        	this.dDesignation = dDesignation;
+        	this.dLinkedin = dLinkedin;
+            this.dGitHub = dGitHub;
+        	this.dPhone = dPhone;
+    	}
+    }
+    
+}
