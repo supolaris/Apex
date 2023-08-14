@@ -1,0 +1,8 @@
+constructor_class myClass = new constructor_class(15, 13);
+
+myClass.tPatients();
+
+
+
+
+
