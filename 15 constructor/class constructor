@@ -1,0 +1,34 @@
+public class constructor_class {
+    
+    Integer totalPatients = 0;
+    Integer recoveredPatients = 0;
+    public constructor_class(){
+        System.debug('Hello World');
+        System.debug('Total patients ' + totalPatients);
+        System.debug('Recovered patients ' + recoveredPatients);
+        
+    }
+    public constructor_class(Integer totalPatients, Integer rVal){
+        this();
+        this.totalPatients = totalPatients;
+        recoveredPatients = rVal;
+        
+
+    }
+    
+        public void tPatients(){
+        System.debug('Total patients ' + totalPatients);
+        System.debug('Recovered patients ' + recoveredPatients);
+        
+    }
+    
+    
+    public void rPatients(){
+        totalPatients++;
+        recoveredPatients++;
+        
+    }
+    
+    
+
+}
