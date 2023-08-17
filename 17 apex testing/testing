@@ -1,0 +1,25 @@
+@istest
+public class testingCodeTest {
+    
+    @istest
+    public static void myTest(){
+        testingCode myClass = new testingCode();
+        myClass.getVal(10);
+        
+        Integer myVal = myClass.requredP();
+        System.assertEquals(10, myVal, 'Input is not same');
+        
+        myClass.increamentVal();
+        myVal = myClass.requredP();
+        
+        System.assert(myVal == 11, 'msg');
+    }
+        @istest
+    	public static void myTestNegative(){
+        testingCode myClass = new testingCode();
+        myClass.getVal(-10);
+        
+        Integer myVal = myClass.requredP();
+        System.assertEquals(0, myVal, 'Input is not same');
+    }
+}
