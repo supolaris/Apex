@@ -1,0 +1,11 @@
+List<Account> myList = [Select Name, Phone FROM Account];
+
+For (Account account: myList){
+    System.debug('Account Name: ' + account.Name + 'Account Phone: ' + account.Phone);
+}
+
+Map<Id, Account> myNewList = new Map<Id, Account>([Select Name, Phone FROM Account]);
+
+For (Account newAccount: myNewList.values()){
+    System.debug('Account Name: ' + newAccount.Name + 'Account Phone: ' + newAccount.Phone);
+}
