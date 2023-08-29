@@ -1,0 +1,1 @@
+SELECT  Account.Name, Account.Rating, Name, Department, Title, (SELECT CaseNumber, Subject FROM Cases WHERE isClosed=false) FROM Contact WHERE Account.Rating ='Hot' AND Department='Technology' ORDER BY Name
