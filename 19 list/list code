@@ -1,0 +1,16 @@
+List<string> myList1 = new List<string>{'hello', 'world'};
+System.debug(myList1);
+
+
+List<string> myList2 = new List<string>();
+myList2.add('apex');
+myList2.add('code');
+System.debug(myList2);
+
+List<string> myList3 = new List<string>();
+myList3.add('java');
+myList3.add('javascript');
+string myGetWord = myList3.get(1);
+System.debug(myGetWord);
+
+myList1.clear();
