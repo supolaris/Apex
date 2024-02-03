@@ -5,9 +5,29 @@ String: 'Hello World'. It stores the string values.
 Integer: 12345. It is 32 bit iteger and stores integer/number values and upto 2^32.
 Long: 12345. It is 64 bit iteger and stores integer/number values and upto 2^64.
 Decimal: 10.2. It is 32 bit iteger and stores integer/number values and upto 2^32.
-Double: 10.2. It is 64 bit iteger and stores integer/number values and upto 2^64.
-Date: 
-Time:
-Datetime:
-Blob:
-ID:
+Double: 10.2. It is 64 bit iteger and stores integer/number values and upto 2^64.string myString = 'Hello world';
+System.debug(myString);
+
+boolean myBool = true;
+System.debug(myBool);
+
+integer myInteger = 627;
+System.debug(myInteger);
+
+long myLong = 1000000000L;
+System.debug(myLong);
+
+decimal myDecimal = 1.2;
+System.debug(myDecimal);
+
+double myDouble = 1.222222222D;
+System.debug(myDouble);
+
+Date myDate = Date.newInstance(2024, 02, 3);
+System.debug(myDate);
+
+Time myTime = Time.newInstance(14, 45, 22, 11);
+System.debug(myTime);
+
+Datetime myDateTime = Datetime.newInstance(2024, 02, 3, 02, 11, 22);
+System.debug(myDateTime);
