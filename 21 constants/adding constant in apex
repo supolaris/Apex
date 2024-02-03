@@ -1,0 +1,17 @@
+double myNum = 3.4;
+System.debug(myNum);
+
+myNum = 2.3;
+System.debug(myNum);
+
+
+Final double myNum3;
+System.debug(myNum3);
+
+
+myNum3 = 2.3;
+System.debug(myNum3);
+
+// we cannot update constant(Final) variable
+/*myNum3 = 2.4;
+System.debug(myNum3);*/
