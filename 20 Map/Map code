@@ -1,0 +1,15 @@
+Map<integer, string> myStudents = new Map<integer, string>();
+
+// add/update value
+myStudents.put(102, 'james');
+myStudents.put(103, 'angel');
+System.debug(myStudents);
+
+// get values
+System.debug(myStudents.get(102));
+
+// get all keys
+System.debug(myStudents.keySet());
+
+// get all values
+System.debug(myStudents.values());
