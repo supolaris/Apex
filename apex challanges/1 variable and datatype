@@ -1,0 +1,16 @@
+// apex list
+List<string> myApexList = new List<string>();
+myApexList.add('apex collection');
+myApexList.add('apex start');
+
+// lightening class
+List<string> myLighteningList = new List<string>();
+myLighteningList.add('aura framework');
+myLighteningList.add('reuseable component');
+
+// mapping (storing string and list in a single map)
+Map<string, List<string>> myMaps = new Map<string, List<string>>();
+myMaps.put('one', myApexList);
+myMaps.put('two', myLighteningList);
+System.debug(myMaps);
+
