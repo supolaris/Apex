@@ -1,0 +1,20 @@
+// Set stores value just like List but we can't have indexes in this instead it stores value without any indexes but randomly
+
+Set<string> myList1 = new Set<string>{'hello', 'world'};
+System.debug(myList1);
+
+
+Set<string> myList2 = new Set<string>();
+myList2.add('apex');
+myList2.add('code');
+System.debug(myList2);
+
+Set<string> myList3 = new Set<string>();
+myList3.add('java');
+myList3.add('javascript');
+System.debug(myList3);
+
+myList1.clear();
+System.debug(myList1.isEmpty());
+myList3.remove('java');
+System.debug(myList3);
