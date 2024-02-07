@@ -1,0 +1,7 @@
+public class Helloworld {
+    string myString = 'Hello World';
+    
+    public void sayHelloFunction(){
+    System.debug(myString);
+    }
+}
