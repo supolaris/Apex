@@ -1,0 +1,1 @@
+SELECT AccountNumber, name, phone, type, SLAExpirationDate__c FROM account WHERE Type IN ('Customer - Channel', 'Technology Partner', 'Customer - Direct') AND AccountNumber LIKE 'c%' AND SLAExpirationDate__c <= TODAY ORDER BY Name Desc LIMIT 20 OFFSET 2
