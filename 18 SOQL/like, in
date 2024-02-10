@@ -1,0 +1,1 @@
+SELECT AccountNumber, name, phone, type FROM account WHERE AccountNumber IN ('CD451796', 'CD656092', 'CC947211') AND Type LIKE 'customer%'
