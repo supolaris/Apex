@@ -1,0 +1,1 @@
+SELECT AccountNumber, name, phone, type FROM account WHERE type IN ('Customer - Channel', 'Technology Partner') AND AccountNumber LIKE 'c%' ORDER BY Name Desc LIMIT 2 OFFSET 1
