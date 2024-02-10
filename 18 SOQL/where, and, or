@@ -1,0 +1,1 @@
+SELECT AccountNumber, name, phone, type FROM account WHERE (AccountNumber = 'CD451796' OR AccountNumber = 'CD656092') AND Type = 'Customer - Direct'
