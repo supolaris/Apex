@@ -16,9 +16,11 @@ myAccount.add(acc4);
 myAccount.add(new Account(Name = 'Jac5'));
 
 // it will stop execution if there is error in any one
+// DML statement
 insert myAccount;
 
 // it will stop execution if there is error in any one
+// Database statement
 //Database.insert(myAccount, false);
 
 // will skip the error one and start inserting next accounts
