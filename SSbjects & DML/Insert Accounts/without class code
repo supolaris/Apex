@@ -1,0 +1,29 @@
+/*Contact myContact = new Contact();
+myContact.FirstName = 'Jack';
+myContact.LastName = 'James';
+
+insert myContact;*/
+
+List<Account> myAccount = new List<Account>();
+
+Account acc2 = new Account(Name = 'Jac2');
+Account acc3 = new Account(Name = 'Jac3');
+Account acc4 = new Account(Name = 'Jac4');
+myAccount.add(acc2);
+myAccount.add(acc3);
+myAccount.add(acc4);
+
+myAccount.add(new Account(Name = 'Jac5'));
+
+// it will stop execution if there is error in any one
+insert myAccount;
+
+// it will stop execution if there is error in any one
+//Database.insert(myAccount, false);
+
+// will skip the error one and start inserting next accounts
+// by default 2nd parameter is 'false'
+//Database.insert(myAccount);
+
+// will skip the error one and start inserting next accounts
+Database.insert(myAccount, false);
