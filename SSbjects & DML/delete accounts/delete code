@@ -1,0 +1,17 @@
+// deleting records/accounts
+List<Account> myAccounts = [SELECT Id FROM Account WHERE Name LIKE 'JAC%'];
+
+// dml statement
+delete myAccounts;
+
+// database statement
+Database.delete(myAccounts, false);
+
+// undeleting records/accounts
+List<Account> myAccounts = [SELECT Id FROM Account WHERE isDeleted=true ALL ROWS];
+
+// dml statement
+undelete myAccounts;
+
+// database statement
+Database.undelete(myAccounts, false);
