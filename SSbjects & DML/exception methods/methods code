@@ -1,0 +1,39 @@
+integer myDivisor = 10;
+integer myReciprocal = 0;
+double myReminder;
+try {
+    myReminder = myDivisor/myReciprocal;
+   	system.debug(myReminder);
+    
+}
+// catch get/identify the error 'exception' is generic 
+catch (Exception e){
+    // 'e' gives the exception/error message
+    System.debug('Cause: ' + e.getCause());
+    System.debug('Line Number: ' + e.getLineNumber());
+    System.debug('Message: ' + e.getMessage());
+    System.debug('Stack Trace: ' + e.getStackTraceString());
+    System.debug('Type Name: ' + e.getTypeName());
+}
+/* 
+getCause		Exception	Returns the cause of the exception as an exception object.
+getLineNumber		Integer	Returns the line number from where the exception was thrown.
+getMessage		String	Returns the error message that displays for the user.
+getStackTraceString		String	Returns the stack trace of a thrown exception as a string.
+getTypeName
+
+// 'MathException' is not generic it will get only errors associated with 'MathException'
+catch (MathException e){
+    // 'e' gives the exception/error message
+    System.debug(e);
+    
+}
+*/
+// finally will get execuated no matters what.
+finally{
+    myReciprocal ++;
+    myReminder = myDivisor/myReciprocal;
+    system.debug('Updated answer in FINALLY statement ' + myReminder);
+}
+
+// reference https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_classes_exception_methods.htm
