@@ -1,0 +1,31 @@
+// code (we are also accessing custom class which is custom created)
+integer myDivisor = 10;
+integer myReciprocal = 0;
+double myReminder;
+try {
+    myReminder = myDivisor/myReciprocal;
+   	system.debug(myReminder);
+    
+    // if we commit line 5,6 then this exception will be shown debug log
+    // extendingException is a saperate class. we are accessing it here
+    throw new extendingException('throwing custom exception');
+    
+}
+// catch get/identify the error 'exception' is generic 
+catch (Exception e){
+    // 'e' gives the exception/error message
+    system.debug(e);
+}
+
+// finally will get execuated no matters what.
+finally{
+    myReciprocal ++;
+    myReminder = myDivisor/myReciprocal;
+    system.debug('Updated answer in FINALLY statement ' + myReminder);
+}
+
+// custom class
+// for a class to extends exception the class name must end with Exception
+public class extendingException extends exception{
+
+}
