@@ -1,0 +1,10 @@
+List<Opportunity> myOppRecords = [SELECT Id FROM Opportunity ];
+
+
+List<Id> myIds = new List<Id>();
+
+for(Opportunity myOpp : myOppRecords){
+    myIds.add(myOpp.Id);
+}
+
+OpportunityController.OpportunityUpdater(myIds);
