@@ -1,0 +1,37 @@
+// account controler class
+public class accountController {
+    
+    // insert new multiple accounts method
+    public static List<Account> insertingAccount(List<Account> accountToInsert){
+        insert accountToInsert;
+        return accountToInsert;
+    }
+    
+    // insert new one accounts method
+    public static Account insertingAccount(Account accountToInsert){
+        insert accountToInsert;
+        return accountToInsert;
+    }
+    
+    // get info about accounts method
+    public static List<Account> gettingAllAccounts(){
+        List<Account> myAccounts = [SELECT Name, Phone FROM Account];
+        return myAccounts;
+    }
+    
+    // print info about accounts method
+    public void printAllAccounts(){
+        List<Account> myGetAccounts = gettingAllAccounts();
+        
+        for(Account acc : myGetAccounts){
+            System.debug('Account Name: ' + acc.Name + ' Account Phone: ' + acc.Phone);
+        }
+    }
+    
+    // get number/size of accounts
+    public static integer gettingAccountsSize(){
+        List<Account> AccountsSize = gettingAllAccounts();
+        return AccountsSize.size();
+    }
+
+}
