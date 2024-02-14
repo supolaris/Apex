@@ -1,0 +1,14 @@
+// updating single record
+Account myAccounts = [SELECT Name, OwnerID From Account WHERE Name = 'Jac8'];
+acc.Name = 'Jac9';
+acc.OwnerID = 'ID HERE';
+
+update myAccounts;
+
+// updating multiple records and changing their owner
+List<Account> myAccounts = [SELECT OwnerId From Account WHERE Name LIKE 'Jac%'];
+for(Account acc: myAccounts){
+    //acc.Name = 'Jac10';
+    acc.OwnerId = 'ID HERE';
+}
+update myAccounts;
