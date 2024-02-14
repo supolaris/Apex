@@ -1,0 +1,17 @@
+public class OpportunityController {
+    
+    public static void OpportunityUpdater(List<id> myIds){
+        for(Id Ids : myIds){
+            Opportunity myOpportunities = [SELECT Id, Amount, Profile__c FROM Opportunity WHERE Id =: Ids];
+            
+            if(myOpportunities.Amount <10000){
+                myOpportunities.Profile__c = 'Low';
+            }else if(myOpportunities.Amount > 50000){
+                myOpportunities.Profile__c = 'High';
+            }else {
+                myOpportunities.Profile__c = 'Medium';
+            }
+            update myOpportunities;
+        }
+    }
+}
