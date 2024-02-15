@@ -1,0 +1,7 @@
+SELECT COUNT() FROM Account //returns total number of account
+SELECT COUNT(Name) FROM Account //returns total number of names in account
+SELECT COUNT_DISTINCT(Name) FROM Account //returns total number of names in account but excludes the duplicate  
+SELECT AVG(Amount) FROM Opportunity //returns average amount in apportunity
+SELECT SUM(Amount) FROM Opportunity //returns sum of amount in apportunity
+SELECT MIN(Amount) FROM Opportunity //returns minimum amount in apportunity
+SELECT MAX(Amount) FROM Opportunity //returns maximum amount in apportunity
