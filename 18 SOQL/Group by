@@ -1,0 +1,1 @@
+SELECT StageName, IsPrivate, AVG(Amount), MIN(Amount), MAX(Amount) FROM Opportunity GROUP BY StageName, IsPrivate
