@@ -1,0 +1,1 @@
+SELECT StageName, COUNT(Amount) FROM Opportunity GROUP BY StageName HAVING COUNT(Amount) >= 18
