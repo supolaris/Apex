@@ -1,0 +1,28 @@
+trigger OpportunityTrigger on Opportunity (before insert, before update) {
+    
+    Switch on Trigger.operationTYpe{
+        when BEFORE_INSERT{
+                for(Opportunity myOpp : Trigger.new){
+                    if(string.isBlank(myOpp.AccountId)){
+                        myOpp.Profile__c = 'Low';
+       	 }
+                    if(string.isBlank(myOpp.Type) && trigger.isInsert){
+                        myOpp.addError('Enter tracking number');
+                    }
+                    
+                }
+        }
+        when BEFORE_UPDATE{
+            for(Opportunity myOpp: Trigger.new){
+               	if(string.isBlank(myOpp.Type) && trigger.isUpdate){
+                        myOpp.addError('Enter tracking number on update');
+                    }
+            }
+        }
+    }
+}
+
+// isUpdate called when update trigger is called
+// isInsert called when insert trigger is called
+// isDelete called when delete trigger is called
+// isUndelete called when undelete trigger is called
