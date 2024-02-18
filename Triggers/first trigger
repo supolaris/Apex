@@ -1,0 +1,10 @@
+trigger OpportunityTrigger on Opportunity (before insert) {
+    
+    Switch on Trigger.operationTYpe{
+        when BEFORE_INSERT{
+                for(Opportunity myOpp : Trigger.new){
+                    if(string.isBlank(myOpp.AccountId)){
+                        myOpp.Profile__c = 'Low';
+       	 }}}
+    }
+}
