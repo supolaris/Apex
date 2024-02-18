@@ -1,0 +1,15 @@
+trigger OpportunityTrigger on Opportunity (before insert) {
+    
+    Switch on Trigger.operationTYpe{
+        when BEFORE_INSERT{
+                for(Opportunity myOpp : Trigger.new){
+                    if(string.isBlank(myOpp.AccountId)){
+                        myOpp.Profile__c = 'Low';
+       	 }
+                    if(string.isBlank(myOpp.Type)){
+                        // .addError method thorw the error according to the condition
+                        myOpp.addError('Enter tracking number');
+                    }
+                }}
+    }
+}
