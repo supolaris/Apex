@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+        <lightning:card footer="Hello world footer" title="Hello world">
+   
+        <p class="slds-p-horizontal_small">
+            First lightning/aura component
+        </p>
+            
+            <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    	<lightning:button variant="brand" label="Click" title="Brand action" />
+            
+    </lightning:card>
+</aura:component>
