@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+    <aura:attribute 
+        name="Modes" 
+        type="List" 
+        default="[
+    {'label': 'Easy', 'value': 'easy'},
+    {'label': 'Medium', 'value': 'medium'},
+    {'label': 'Hard', 'value': 'hard'},
+    ]" 
+    />
+
+    <!--Declaring attribute/variable-->
+    <aura:attribute 
+        name="Game_Name"
+        type="String"
+        default="Ligntning Game"
+    />
+
+
+    <!--accessing the declared attribute variable-->
+    <lightning:card title="{!v.Game_Name}">
+        <lightning:combobox name="selectModeName" label="Select Game Mode" options="{!v.Modes}" placeholder="Game Type">
+        </lightning:combobox>
+        <lightning:button variant="brand" label="Start New Game" title="newGameTitle" />
+        <lightning:button label="Reshuffle" title="reshuffleTitle" />
+    </lightning:card>
+
+</aura:component>
