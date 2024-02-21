@@ -1,0 +1,16 @@
+({
+    selectModeFunction : function(component, event, helper) {
+
+        // getting id of comboBox (component)
+        let gameModeId = component.find("comboBoxId");
+
+        // accessing value of comboBox
+        let gameModeValue = gameModeId.get("v.value");
+        console.log('Game mode is: '+ gameModeValue);
+        alert("Game mode is: " + gameModeValue);
+
+    },
+    reshuffleFunction: function(component, event, helper){
+        console.log('Reshuffle function called')
+    }
+})
