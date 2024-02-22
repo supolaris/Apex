@@ -1,0 +1,43 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="Modes" type="List" default="[
+    {'label': 'Easy', 'value': 'easy'},
+    {'label': 'Medium', 'value': 'medium'},
+    {'label': 'Hard', 'value': 'hard'},
+    ]" />
+
+    <aura:attribute name="selectedVal" type="string" />
+
+    <!--Declaring attribute/variable-->
+    <aura:attribute name="Game_Name" type="String" default="Ligntning Game" />
+
+    <!--accessing the declared attribute variable-->
+    <lightning:card title="{!v.Game_Name}">
+
+        <!--starting layout-->
+        <lightning:layout horizontalAlign="center">
+            <!--layout item-->
+            <lightning:layoutItem padding="around-small">
+                <lightning:combobox name="selectModeName" label="Select Game Mode" options="{!v.Modes}"
+                    placeholder="Game Type" variant="label-hidden" aura:id="comboBoxId">
+                </lightning:combobox>
+            </lightning:layoutItem>
+
+            <lightning:layoutItem padding="around-small">
+                <lightning:button variant="brand" label="Start New Game" title="newGameTitle"
+                    onclick="{!c.selectModeFunction}" />
+            </lightning:layoutItem>
+
+            <lightning:layoutItem padding="around-small">
+                <lightning:button label="Reshuffle" title="reshuffleTitle" onclick="{!c.reshuffleFunction}" />
+            </lightning:layoutItem>
+        </lightning:layout>
+
+        <!--Bound expression-->
+        <p>Selected value is: {!v.selectedVal}</p>
+        <!--Unbound expression-->
+        <p>Selected value is: {#v.selectedVal}</p>
+
+    </lightning:card>
+
+</aura:component>
