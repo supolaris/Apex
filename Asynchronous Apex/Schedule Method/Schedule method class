@@ -1,0 +1,11 @@
+public class leadAsynchronousScheduleMethod implements Schedulable{
+    
+    public void execute(SchedulableContext SC){
+        List<Lead> myLeadRecords = [SELECT Id, LeadSource FROM Lead];
+        For(Lead myLeads: myLeadRecords){
+            myLeads.LeadSource = 'Web';
+        }
+        update myLeadRecords;
+    }
+
+}
