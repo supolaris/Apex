@@ -1,0 +1,12 @@
+leadAsynchronousScheduleMethod myScheduleInstance = new leadAsynchronousScheduleMethod();
+
+// (seconds, minutes, hours, day of month, months, day of week)
+// 00 => seconds
+// 50 => minutes
+// 18 => hours
+// ? => day on month
+// * => month
+// 2(monday) => day of week
+string cornExp = '00 50 18 ? * 2';
+
+Id myJobId = System.Schedule('My Lead Job', cornExp, myScheduleInstance);
