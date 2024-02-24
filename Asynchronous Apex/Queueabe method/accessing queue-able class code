@@ -1,0 +1,3 @@
+leadAsynchronousQueueMethod myQueueInstance = new leadAsynchronousQueueMethod();
+
+Id myJobId = System.enqueueJob(myQueueInstance);
