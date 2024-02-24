@@ -1,0 +1,3 @@
+leadAsynchronousBatchMethod newBatchInstance = new leadAsynchronousBatchMethod();
+
+Database.executeBatch(newBatchInstance);
