@@ -1,0 +1,22 @@
+public class leadAsynchronousFutureMethod {
+    
+    @future
+    public static void updateLeadRecord(List<Id> myLeadRecordsId){
+        List<Lead> myLeadRecords = [SELECT Id, LeadSource from Lead WHERE Id IN: myLeadRecordsId];
+        for(Lead existingRecords : myLeadRecords){
+            existingRecords.LeadSource = 'Web';
+            
+        }
+        update myLeadRecords;
+
+        // we cannot call lead function in another lead function
+        // createLeadRecord();
+    }
+    
+    @future
+    public static void createLeadRecord(){
+        Lead newLead = new Lead(Salutation = 'Mr', LastName = 'James', Company = 'xyz');
+        insert newLead;
+        
+    }
+}
