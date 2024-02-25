@@ -1,0 +1,12 @@
+trigger oldNewStatusTriggerOnlead on Lead (before update) {
+    
+    switch on Trigger.operationType{
+        when BEFORE_UPDATE{
+            for(Lead myLead : Trigger.new){
+                if((myLead.Status == 'Closed -- Converted' || myLead.Status == 'Closed - Not Converted') && Trigger.oldMap.get(myLead.Id).Status == 'Open - Not Contacted'){
+                    myLead.Status.addError('Open lead can not be directly closed');
+                }
+            }
+        }
+    }
+}
