@@ -1,0 +1,83 @@
+// before insert (before inserting new record this trigger will be called)
+// after insert (after we insert new record this trigger will be called)
+
+// before update (before we update new record this trigger will be called)
+// after update (after we update any record this trigger will be called)
+
+// before delete (before we delete existing record this trigger will be called)
+// after delete (after we delete existing record this trigger will be called)
+
+// after undelete (when/after we undo/undelete any existing record this trigger will be called)
+
+
+// trigger context variable, it check which type of event is called and then works accordingly (Note: we can replace the trigger context with SWITCH)
+// 1. isInsert (insert operation)
+// 2. isUpdate (update operation)
+// 3. isDelete (delete operation)
+// 4. isUndelete (undelete operation)
+
+
+
+// before update
+
+trigger beforeUpdateTrigger on Lead (before update) {
+    
+    switch on Trigger.operationType{
+        when BEFORE_UPDATE{
+            for(Lead myLead : Trigger.new){
+                if(string.isBlank(myLead.Rating )){
+                    myLead.Rating  = 'Warm';
+                }
+
+            }
+        }
+    }
+
+}
+
+// after update
+
+trigger afterUpdateTrigger on Lead (after update) {
+    
+    switch on Trigger.operationType{
+        when AFTER_UPDATE{
+            for(Lead myLead : Trigger.new){
+                // in OwnerId add the id of user and task will be assigned to that particular user
+                Task myTask = new Task(Subject = 'Review the update', OwnerId = '', WhoId=myLead.Id);
+                insert myTask;
+            }
+        }
+    }
+
+}
+
+// before insert
+
+trigger beforeInsertTrigger on Lead (before insert) {
+    
+    switch on Trigger.operationType{
+        when BEFORE_INSERT{
+            for(Lead myLead : Trigger.new){
+                if(string.isBlank(myLead.FirstName )){
+                    myLead.addError('First Name should not be blanked');
+                }
+
+            }
+        }
+    }
+}
+
+// after insert 
+
+trigger afterInsertTrigger on Lead (after insert) {
+    
+    switch on Trigger.operationType{
+        when AFTER_INSERT{
+            for(Lead myLead : Trigger.new){
+                Task newTask = new Task(Subject = 'Other', WhoId = myLead.Id);
+                insert newTask;
+            }
+        }
+    }
+
+}
