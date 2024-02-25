@@ -1,0 +1,18 @@
+trigger oldNewStatusTriggerOnlead on Lead (before update) {
+    
+    // if there are multiple tirggers these will execute for all of them automatically
+    system.debug('Trigger size: ' + trigger.size); // print size of trigger.
+    system.debug('Trigger is executing: ' + trigger.isExecuting); // true or false
+    system.debug('Trigger operation type: ' + trigger.operationType); // what type of tirgger is executing
+    
+    switch on Trigger.operationType{
+        when BEFORE_UPDATE{
+            for(Lead myLead : Trigger.new){
+                if((myLead.Status == 'Closed -- Converted' || myLead.Status == 'Closed - Not Converted') && Trigger.oldMap.get(myLead.Id).Status == 'Open - Not Contacted'){
+                    myLead.Status.addError('Open lead can not be directly closed');
+                }
+            }
+        }
+    }
+
+}
