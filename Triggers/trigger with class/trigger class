@@ -1,0 +1,9 @@
+public class HandlerClassTriggerOnLead{
+    
+    public static void HandlerFunction(List<Lead> myLeadList){
+        for(Lead myLead : myLeadList){
+            Task myTask = new Task(Subject = 'Email ', WhoId = myLead.Id);
+            insert myTask;
+        }
+    }
+}
