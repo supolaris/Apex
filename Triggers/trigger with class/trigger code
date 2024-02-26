@@ -1,0 +1,9 @@
+trigger afterInsertTrigger on Lead (after insert) {
+    
+    switch on Trigger.operationType{
+        when AFTER_INSERT{
+            HandlerClassTriggerOnLead.HandlerFunction(Trigger.new);
+        }
+    }
+
+}
